@@ -1,0 +1,20 @@
+drop database if exists imagenes;
+CREATE DATABASE imagenes;
+USE imagenes;
+
+/*Estructura de la tabla para `producto` */
+
+-- DROP TABLE IF EXISTS `producto`;
+
+CREATE TABLE `producto` (
+  `idProducto` int(11)     NOT NULL AUTO_INCREMENT,
+  `nombre`     varchar(20) DEFAULT NULL,
+  `cantidad`     double      DEFAULT NULL,
+  `marca`      varchar(20) DEFAULT NULL,
+  `foto`       longblob,
+  PRIMARY KEY (`idProducto`)
+);
+
+alter table producto auto_increment=2019001;
+
+select * from producto
